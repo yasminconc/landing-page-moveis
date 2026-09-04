@@ -5,6 +5,8 @@ import styled from 'styled-components'
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 `;
 
 export const HeroPlaceholder = styled.div`

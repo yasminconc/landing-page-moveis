@@ -11,13 +11,20 @@ export const ContainerHeader = styled.div `
   background: ${({theme}) =>  theme.colors.primary};
   font-family: ${({theme}) =>  theme.fonts.title};
   font-weight: 600;
+  z-index: 100;
 
   a {
     color: white;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    padding: 0 1.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 0 2rem;
+    height: 6rem; /* Reduz um pouco o header em telas intermediárias */
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0 1.25rem;
+    height: 4rem; /* Altura mais enxuta no mobile */
   }
 `
 
@@ -26,11 +33,31 @@ export const BoxLogo = styled.div `
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 1;
 
   img {
     display: block;
+    height: auto;
+
+    /* A largura escala dinamicamente:
+       - Mínimo no celular: 85px
+       - Escala fluida: 11vw da largura da tela
+       - Máximo no desktop: 145px (ou o tamanho original do seu Figma)
+    */
+    width: clamp(85px, 11vw, 145px);
+
+    /* Sombra suave para destacar o selo sobreposto à imagem escura do Hero */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+    transition: width 0.2s ease;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    img {
+      /* Ajuste específico para mobile mantendo o selo ultrapassando */
+      width: clamp(80px, 20vw, 110px);
+    }
+  }
+  
 `
 
 export const NavMenu = styled.nav `

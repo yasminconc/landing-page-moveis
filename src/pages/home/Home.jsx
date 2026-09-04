@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeroPlaceholder, HomeContainer } from './style'
 import Header from '../../components/header/Header'
+import { Hero } from '../../sections/hero/Hero'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       {/* <Footer /> */}
 
       <Header/>
+      <Hero/>
     </HomeContainer>
   )
 }
