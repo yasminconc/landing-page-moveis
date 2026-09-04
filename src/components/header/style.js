@@ -30,7 +30,7 @@ export const ContainerHeader = styled.div `
 
 export const BoxLogo = styled.div `
   position: absolute;
-  left: 50%;
+  left: 50%;  
   top: 0;
   transform: translateX(-50%);
   z-index: 1;
