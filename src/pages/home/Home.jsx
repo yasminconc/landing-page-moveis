@@ -2,6 +2,7 @@ import React from 'react'
 import { HeroPlaceholder, HomeContainer } from './style'
 import Header from '../../components/header/Header'
 import { Hero } from '../../sections/hero/Hero'
+import RoomsNav from '../../sections/roomsNav/RoomsNav'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
 
       <Header/>
       <Hero/>
+      <RoomsNav/>
     </HomeContainer>
   )
 }
