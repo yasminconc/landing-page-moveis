@@ -30,33 +30,71 @@ export const AboutContainer = styled.div`
 /* Container das imagens divididas */
 export const ImageGallery = styled.div`
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
+  /* Margem inferior de segurança para acomodar o deslocamento vertical sem bater no texto */
+  padding-bottom: 2rem;
 
   img {
-    width: 50%;
-    height: 420px;
+    /* Cada foto ocupa exatamente metade do espaço descontando o gap */
+    width: calc(50% - 0.5rem);
+    
+    /* Substitui a altura fixa por proporção vertical elegante (retrato 3:4) */
+    aspect-ratio: 3 / 4;
+    height: auto;
     object-fit: cover;
+    object-position: center;
     display: block;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 
-    /* Deslocamento vertical sutil para dar dinamismo */
+    /* Deslocamento vertical escalável */
     &:first-child {
-      transform: translateY(-20px);
+      transform: translateY(-12px);
     }
 
     &:last-child {
-      transform: translateY(38px);
+      transform: translateY(48px);
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md || '768px'}) {
+    max-width: 440px; /* Limita a largura no celular para caber com folga nas margens */
+    padding-bottom: 1.5rem;
+
+    img {
+      aspect-ratio: 3 / 4.2;
+
+      &:first-child {
+        transform: translateY(-8px);
+      }
+
+      &:last-child {
+        transform: translateY(36px); /* Reduz o salto no mobile */
+      }
     }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm || '480px'}) {
+    max-width: 100%;
+    padding: 0 0.5rem 1.5rem;
+
+    
     img {
-      height: 300px;
+      aspect-ratio: 3 / 4.2;
+
+      &:first-child {
+        transform: translateY(-4px);
+      }
+
+      &:last-child {
+        transform: translateY(28px); 
+      }
     }
   }
+  
 `;
 
 export const ContentBox = styled.div`
