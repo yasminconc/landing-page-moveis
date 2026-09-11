@@ -46,7 +46,7 @@ export const HeroContent = styled.div`
   z-index: 2;
 
   h1 {
-    font-family: ${({ theme }) => theme.fonts.title};
+    font-family: ${({ theme }) => theme.fonts.body};
     font-size: clamp(2rem, 4vw, 3.5rem); 
     line-height: 1.20;
     color: ${({ theme }) => theme.colors.surface};

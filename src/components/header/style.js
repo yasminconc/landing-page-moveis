@@ -9,7 +9,7 @@ export const ContainerHeader = styled.div `
   width: 100%;
 
   background: ${({theme}) =>  theme.colors.primary};
-  font-family: ${({theme}) =>  theme.fonts.title};
+  font-family: ${({theme}) =>  theme.fonts.body};
   font-weight: 600;
   z-index: 100;
 
