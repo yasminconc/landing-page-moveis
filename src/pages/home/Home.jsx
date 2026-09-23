@@ -6,6 +6,7 @@ import RoomsNav from '../../sections/roomsNav/RoomsNav'
 import About from '../../sections/about/About'
 import Products from '../../sections/products/Products'
 import WhyChooseUs from '../../sections/whyChooseUs/WhyChooseUs'
+import CustomRequest from '../../sections/customRequest/CustomRequest'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About/>
       <Products/>
       <WhyChooseUs/>
+      <CustomRequest/>
     </HomeContainer>
   )
 }
