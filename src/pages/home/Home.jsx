@@ -5,6 +5,7 @@ import { Hero } from '../../sections/hero/Hero'
 import RoomsNav from '../../sections/roomsNav/RoomsNav'
 import About from '../../sections/about/About'
 import Products from '../../sections/products/Products'
+import WhyChooseUs from '../../sections/whyChooseUs/WhyChooseUs'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <RoomsNav/>
       <About/>
       <Products/>
+      <WhyChooseUs/>
     </HomeContainer>
   )
 }
