@@ -8,6 +8,7 @@ import Products from '../../sections/products/Products'
 import WhyChooseUs from '../../sections/whyChooseUs/WhyChooseUs'
 import CustomRequest from '../../sections/customRequest/CustomRequest'
 import Testimonials from '../../sections/testimonials/Testimonials'
+import Footer from '../../sections/footer/Footer'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <WhyChooseUs/>
       <CustomRequest/>
       <Testimonials/>
+      <Footer/>
     </HomeContainer>
   )
 }
