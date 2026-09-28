@@ -2,8 +2,11 @@ import React from 'react'
 import * as S from './style'
 import about1 from '../../assets/about-us1.svg'
 import about2 from '../../assets/about-us2.svg'
+import { useNavigate } from 'react-router-dom'
 
 const About = () => {
+   const navigate = useNavigate()
+
   return (
    <S.AboutSection id="about">
       <S.AboutContainer>
@@ -31,7 +34,9 @@ const About = () => {
             commodo suspendisse nunc enim tristique et.
           </p>
 
-          <button type="button">READ MORE</button>
+          <button type="button" onClick={() => navigate('/our-history')}>
+            READ MORE
+          </button>
         </S.ContentBox>
       </S.AboutContainer>
     </S.AboutSection>
