@@ -18,24 +18,22 @@ const About = () => {
 
         {/* Lado Direito: Textos e CTA */}
         <S.ContentBox>
-          <span className="subtitle">ABOUT US</span>
+          <span className="subtitle">SOBRE NÓS</span>
 
           <h2>
-            <span className="highlight">OUR</span> HISTORY OF
+            <span className="highlight">NOSSA</span> HISTÓRIA EM
             <br />
-            MAKING THE BEST
+            CRIAR OS MELHORES
             <br />
-            WOOD PRODUCT
+            PRODUTOS EM MADEIRA
           </h2>
 
           <p>
-            Risus scelerisque a non turpis vitae malesuada sed venenatis.
-            In fringilla sollicitudin euismod sed. At urna adipiscing
-            commodo suspendisse nunc enim tristique et.
+            Combinamos a tradição da marcenaria com um design contemporâneo. Cada peça de madeira é tratada com rigor, paixão e dedicação para transformar os seus espaços em ambientes únicos e acolhedores.
           </p>
 
           <button type="button" onClick={() => navigate('/our-history')}>
-            READ MORE
+            SAIBA MAIS
           </button>
         </S.ContentBox>
       </S.AboutContainer>

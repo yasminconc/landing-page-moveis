@@ -27,7 +27,7 @@ export const AboutContainer = styled.div`
   }
 `;
 
-/* Container das imagens divididas */
+/* Container das imagens divididas (mantém a ordem original) */
 export const ImageGallery = styled.div`
   display: flex;
   justify-content: center;
@@ -35,14 +35,10 @@ export const ImageGallery = styled.div`
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
-  /* Margem inferior de segurança para acomodar o deslocamento vertical sem bater no texto */
   padding-bottom: 2rem;
 
   img {
-    /* Cada foto ocupa exatamente metade do espaço descontando o gap */
     width: calc(50% - 0.5rem);
-    
-    /* Substitui a altura fixa por proporção vertical elegante (retrato 3:4) */
     aspect-ratio: 3 / 4;
     height: auto;
     object-fit: cover;
@@ -50,7 +46,6 @@ export const ImageGallery = styled.div`
     display: block;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 
-    /* Deslocamento vertical escalável */
     &:first-child {
       transform: translateY(-12px);
     }
@@ -61,7 +56,7 @@ export const ImageGallery = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md || '768px'}) {
-    max-width: 440px; /* Limita a largura no celular para caber com folga nas margens */
+    max-width: 440px;
     padding-bottom: 1.5rem;
 
     img {
@@ -72,7 +67,7 @@ export const ImageGallery = styled.div`
       }
 
       &:last-child {
-        transform: translateY(36px); /* Reduz o salto no mobile */
+        transform: translateY(36px);
       }
     }
   }
@@ -80,7 +75,6 @@ export const ImageGallery = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.sm || '480px'}) {
     max-width: 100%;
     padding: 0 0.5rem 1.5rem;
-
     
     img {
       aspect-ratio: 3 / 4.2;
@@ -94,7 +88,6 @@ export const ImageGallery = styled.div`
       }
     }
   }
-  
 `;
 
 export const ContentBox = styled.div`
@@ -103,6 +96,10 @@ export const ContentBox = styled.div`
   align-items: flex-start;
   gap: 1.5rem;
   max-width: 540px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg || '1024px'}) {
+    max-width: 100%;
+  }
 
   .subtitle {
     font-family: ${({ theme }) => theme.fonts.body};
@@ -114,28 +111,37 @@ export const ContentBox = styled.div`
   }
 
   h2 {
-    position: relative; /* Referência para o bloco dourado */
+    position: relative; 
     font-family: ${({ theme }) => theme.fonts.body};
-    font-size: clamp(2rem, 3.2vw, 3rem);
-    line-height: 1.25;
+    /* Reduzimos o tamanho no mobile para evitar quebras excessivas e text-wrap feio */
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.15;
     color: ${({ theme }) => theme.colors.text};
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     z-index: 1;
+    padding-left: 0.4rem; 
 
     /* O bloco decorativo dourado */
     &::before {
       content: '';
       position: absolute;
-      /* Posicionamento no canto superior esquerdo */
-      left: -1.5rem;
-
-      /* Largura cobrindo OUR e altura pegando o topo de MAKING */
-      width: clamp(75px, 5vw, 10px);
-      height: clamp(62px, 6vw, 90px);
-
+      left: -0.8rem;
+      top: -0.2rem;
+      width: clamp(65px, 16vw, 110px);
+      height: clamp(55px, 13vw, 95px);
       background-color: ${({ theme }) => theme.colors.primary};
-      z-index: -1; /* Garante que fique atrás das letras */
+      z-index: -1; 
       pointer-events: none;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md || '768px'}) {
+      font-size: 1.85rem; /* Tamanho otimizado para telas mobile de celulares comuns */
+      padding-left: 0.2rem;
+      &::before {
+        left: -0.6rem;
+        width: 75px;
+        height: 65px;
+      }
     }
   }
 

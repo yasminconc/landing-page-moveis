@@ -7,7 +7,7 @@ export const RequestSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px groove ${({ theme }) => theme.colors.textLight};
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
 export const RequestContainer = styled.div`

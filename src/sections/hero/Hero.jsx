@@ -6,20 +6,21 @@ export function Hero() {
     <S.HeroContainer id="home">
       <S.HeroContent>
         <h1>
-          ELEVATE YOUR HOME <br />
-          WITH EXQUISITE <br />
-          WOOD FURNITURE
+          TRANSFORME SUA CASA <br />
+          COM MÓVEIS <br />
+          DE ALTO PADRÃO
         </h1>
 
         <div className="divider" />
 
         <p>
-          Risus scelerisque a non turpis vitae malesuada sed venenatis. <br/>
-          In fringilla sollicitudin euismod sed. At urna adipiscing <br/>
-          commodo suspendisse nunc enim tristique et.
+          Design atemporal e acabamento artesanal em cada detalhe.{' '}
+          <br/>
+          Peças exclusivas criadas para levar sofisticação, conforto{' '}<br/>
+          e aconchego aos seus ambientes.
         </p>
 
-        <S.DiscoverButton>DISCOVER</S.DiscoverButton>
+        <S.DiscoverButton>DESCUBRA</S.DiscoverButton>
       </S.HeroContent>
     </S.HeroContainer>
   );

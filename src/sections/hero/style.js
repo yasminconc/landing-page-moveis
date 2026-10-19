@@ -40,7 +40,7 @@ export const HeroContainer = styled.section`
 `;
 
 export const HeroContent = styled.div`
-  display: flex;
+ display: flex;
   flex-direction: column;
   gap: 1.5rem;
   z-index: 2;
@@ -51,18 +51,49 @@ export const HeroContent = styled.div`
     line-height: 1.20;
     color: ${({ theme }) => theme.colors.surface};
     letter-spacing: 0.05em;
+
+    /* Ajuste exclusivo para Mobile */
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      /* Desativa as tags <br /> no celular para o texto não ficar fatiado em 5 linhas */
+      br {
+        display: none;
+      }
+      
+      font-size: 1.75rem;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      max-width: 320px; /* Garante que quebre de forma bonita em apenas 3 linhas no mobile */
+    }
   }
 
   p {
     font-size: ${({ theme }) => theme.fontSizes.sm};
     line-height: 1.6;
     color: ${({ theme }) => theme.colors.surface};
+
+    /* Ajuste exclusivo para Mobile */
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      /* Desativa as quebras manuais no celular para o parágrafo fluir normalmente */
+      br {
+        display: none;
+      }
+
+      font-size: 0.875rem;
+      line-height: 1.55;
+      max-width: 100%;
+      letter-spacing: 0.05em;
+      
+    }
   }
 
   .divider {
     width: 100px;
     height: 4px;
     background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 1.25rem;
   }
 `;
 
@@ -74,6 +105,7 @@ export const DiscoverButton = styled.button`
   font-size: ${({ theme }) => theme.fontSizes.xs};
   letter-spacing: 0.12em;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 1rem;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryDark};
@@ -83,3 +115,5 @@ export const DiscoverButton = styled.button`
     transform: scale(0.98);
   }
 `;
+
+

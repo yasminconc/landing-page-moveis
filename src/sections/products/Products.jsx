@@ -86,20 +86,19 @@ const Products = () => {
       <S.ProductsContainer>
         {/* Cabeçalho */}
         <S.HeaderBox>
-          <span className="subtitle">FEATURED PRODUCT</span>
+          <span className="subtitle">MELHORES PRODUTOS</span>
 
           <h2>
-            EXPLORE BEST PRODUCT <br />
-            FROM OUR MASTER CRAFTSMAN
+            EXPLORE OS MELHORES <br />
+            PRODUTOS DOS NOSSOS MACENEIROS
           </h2>
 
           <p>
-            Risus scelerisque a non turpis vitae malesuada sed venenatis. In fringilla sollicitudin
-            euismod sed. At urna adipiscing commodo suspendisse nunc enim tristique et.
+            Descubra peças de excelência criadas com cuidado e atenção aos detalhes, refletindo o melhor da carpintaria tradicional e do design contemporâneo.
           </p>
 
           <S.ActionButton type="button" className="desktop-only">
-            EXPLORE ALL PRODUCT
+            VEJA TODOS OS PRODUTOS
           </S.ActionButton>
         </S.HeaderBox>
 
@@ -145,7 +144,7 @@ const Products = () => {
 
         {/* Botão de Ação no Mobile posicionado após o Carrossel */}
         <S.ActionButton type="button" className="mobile-only">
-          EXPLORE ALL PRODUCT
+          VEJA TODOS OS PRODUTOS
         </S.ActionButton>
       </S.ProductsContainer>
     </S.ProductsSection>

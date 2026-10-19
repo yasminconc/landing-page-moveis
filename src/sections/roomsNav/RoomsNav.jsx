@@ -8,10 +8,10 @@ import glass from '../../assets/dinning-room-icon.svg';
 import office from '../../assets/office-icon.svg';
 
 const roomsData = [
-  { id: 'bedroom', name: 'BEDROOM', icon: bed },
-  { id: 'lounge', name: 'LOUNGE', icon: chair },
-  { id: 'dining', name: 'DINING ROOM', icon: glass }, // 'dining' com 1 'n' para bater com o showcaseData
-  { id: 'office', name: 'OFFICE', icon: office },
+  { id: 'bedroom', name: 'QUARTO', icon: bed },
+  { id: 'lounge', name: 'SALA', icon: chair },
+  { id: 'dining', name: 'SALA DE JANTAR', icon: glass }, // 'dining' com 1 'n' para bater com o showcaseData
+  { id: 'office', name: 'ESCRITÓRIO', icon: office },
 ];
 
 const RoomsNav = () => {
