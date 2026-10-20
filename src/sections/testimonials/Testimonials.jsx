@@ -18,7 +18,7 @@ const testimonialsData = [
     mainImg: client1Main,
     secImg: client1Sec,
     secFocus: 'center 80%',
-    text: 'I recently purchased a bedroom set from Woodland Furniture, and I am amazed by the quality and beauty of the pieces. The wood grain is stunning, and the attention to detail is remarkable.',
+    text: 'Comprei recentemente móveis planejados para a minha cozinha com a Woodland Furniture e estou encantada com a qualidade e a beleza das peças. O acabamento é impecável e a atenção aos detalhes superou todas as minhas expectativas.',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const testimonialsData = [
     mainImg: client2Main,
     secImg: client2Sec,
     secFocus: 'left 60%',
-    text: 'The dining table crafted by their team completely redefined our living area. The custom finish and joinery work exceeded all expectations. Every guest who visits compliments the warmth and elegance of the natural wood.',
+    text: 'O mobiliário planejado e a estante criados pela equipe transformaram totalmente a nossa sala de estar. O acabamento personalizado e a marcenaria superaram todas as expectativas, e todos os convidados elogiam a harmonia e o aconchego do espaço.',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const testimonialsData = [
     mainImg: client3Main,
     secImg: client3Sec,
     secFocus: 'center 75%',
-    text: 'Exceptional personalized service from start to finish. They built a custom study desk and library shelving unit that fits our space to the millimeter. Delivered on schedule and assembled with care.',
+    text: 'Serviço personalizado excecional do início ao fim. Construíram um móvel aparador e peças em madeira à medida que encaixaram perfeitamente no nosso espaço com um acabamento irrepreensível. Entregue dentro do prazo e montado com todo o cuidado.',
   },
 ]
 
@@ -156,9 +156,9 @@ useEffect(() => {
 
           <S.RightCol>
             <S.HeaderBox>
-              <span className="subtitle">TESTIMONIALS</span>
+              <span className="subtitle">DEPOIMENTOS</span>
               <div className="title-row">
-                <h2>LISTEN TO OUR CUSTOMER</h2>
+                <h2>OUÇA NOSSOS CLIENTES</h2>
               </div>
             </S.HeaderBox>
 

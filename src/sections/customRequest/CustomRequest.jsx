@@ -12,21 +12,20 @@ const CustomRequest = () => {
       <S.RequestContainer>
         {/* Lado Esquerdo: Conteúdo e Chamada */}
         <S.ContentBox>
-          <span className="subtitle">CUSTOMIZED REQUEST</span>
+          <span className="subtitle">PEDIDO PERSONALIZADO</span>
 
           <h2>
-            CREATE FURNITURE AS <br />
-            UNIQUE AS YOU ARE
+            CRIE MOBÍLIA TÃO <br />
+            ÚNICA QUANTO VOCÊ
           </h2>
 
           <div className="accent-line" />
 
           <p>
-            Risus scelerisque a non turpis vitae malesuada sed venenatis. In fringilla
-            sollicitudin euismod sed. At urna adipiscing commodo suspendisse nunc enim tristique et.
+            Dê vida à sua visão com peças exclusivas feitas sob medida para o seu espaço. Transformamos os seus desejos em realidade com qualidade artesanal e design adaptado ao seu estilo de vida.
           </p>
 
-          <button type="button">SEND REQUEST</button>
+          <button type="button">ENVIAR PEDIDO</button>
         </S.ContentBox>
 
         {/* 1. Visível apenas no Desktop (duas imagens fatiadas) */}
